@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -76,11 +77,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_margin="15dp"
         android:orientation="horizontal">
 
 
         <RadioGroup
+            android:id="@+id/radio_group"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
@@ -91,6 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:checked="true"
+
                 android:text="Loan" />
 
             <RadioButton
@@ -107,6 +110,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:layout_margin="5dp"
         android:text="Length of Loan(months): 0"/>
 
     <SeekBar
@@ -114,6 +118,7 @@
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:min="0"
         android:max="5"
         android:progress="0" />
@@ -131,6 +136,7 @@
         android:layout_height="wrap_content"
         android:text="Monthly Payment"
         android:textSize="20dp"
+        android:layout_margin="5dp"
         android:textAlignment="center"/>
 
     <TextView
