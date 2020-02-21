@@ -2,6 +2,7 @@ package com.example.carloancalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -96,5 +97,17 @@ public class MainActivity extends AppCompatActivity {
         {
             Toast.makeText(layout.getContext(), "One or more fields are empty", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void switchToAnotherActivity(View view) {
+        Intent i = new Intent(this, ColorActivity.class);
+        startActivityForResult(i, 1);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        int color = data.getIntExtra("COLOR", 0xffffffff);
+        layout.setBackgroundColor(color);
     }
 }

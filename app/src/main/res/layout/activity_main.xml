@@ -149,4 +149,12 @@
         android:textColor="@android:color/black"
         android:textSize="25dp"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:onClick="switchToAnotherActivity"
+        android:text="Switch to Color Activity"/>
+
 </LinearLayout>
